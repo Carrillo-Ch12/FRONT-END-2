@@ -1,6 +1,11 @@
+import NAV from '../components/Navbar'
 function Error() {
     return (
-      <div>Error</div>
+      
+      <div>
+        <NAV/>
+        Error
+        </div>
     )
   }
   export default Error

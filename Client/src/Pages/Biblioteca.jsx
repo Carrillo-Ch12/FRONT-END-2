@@ -1,7 +1,10 @@
-
+import NAV from '../components/Navbar'
 function Bliblioteca() {
   return (
-    <div>Bliblioteca</div>
+    <div>
+      <NAV/>
+      Bliblioteca
+      </div>
   )
 }
 

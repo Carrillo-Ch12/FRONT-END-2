@@ -1,3 +1,10 @@
+.Menu{
+    background-color: rgb(235, 155, 90);
+    margin: 0;
+    padding: 0;
+    display:flex;
+
+}
 .Principal{
     position: absolute;
         left: 50%;
