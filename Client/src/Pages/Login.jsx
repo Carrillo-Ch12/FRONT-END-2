@@ -3,7 +3,7 @@ import '../Components/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
-const baseUrl = "http://localhost:4001/login";
+const baseUrl = "http://localhost:4001/log";
 
 export default class Login extends Component {
   state = {
@@ -40,7 +40,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="fondo">
+      <div >
         <div className="Principal">
           <div className="Secundario">
             <div className="form-group">
