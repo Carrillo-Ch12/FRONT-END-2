@@ -26,7 +26,6 @@ const Router = [
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Biblioteca", element: <Biblioteca /> },
-      
     ],
   },
 ];
