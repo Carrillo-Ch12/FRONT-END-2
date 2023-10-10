@@ -9,8 +9,8 @@ export const AppRouter = props => {
     <Routes>
         <Route path='/' element= {<Login/>}/>
         <Route exact path="/Biblioteca" element= {<Bliblioteca/>}/>
-        <Route exact path="Perfil" element= {<Perfil/>}/>
-        <Route exact path="Registro" element= {<Registro/>}/>
+        <Route exact path="/Perfil" element= {<Perfil/>}/>
+        <Route exact path="/Registro" element= {<Registro/>}/>
         <Route path="/*" element= {<Error/>}/>
 
     </Routes>
