@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PageContainer from "../../components/container/PageContainer";
 import axios from 'axios';
 import { Link } from "react-router-dom";
 
@@ -24,15 +23,16 @@ export const Biblioteca = () => {
   return (
     <>
       <p>Se encontraron {videojuegos.length} resultados</p>
-      <div>className = videojuegos.list</div>
+      <div className="videojuegos-list">
         {videojuegos.map(videojuego => (
-          <Link>
-            <div className="videoJuegos-list">
+          <Link to={`/videojuego/${videojuego.id}`} key={videojuego.id}>
+            <div className="videojuego-item">
               <img src={videojuego.img} alt={videojuego.titulo}/>
+              <p>{videojuego.titulo}</p> {/* Added this line to show the video game title */}
             </div>
           </Link>
-        
         ))}
+      </div>
     </>
   )
 };
