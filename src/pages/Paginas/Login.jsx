@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './components/Login.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-
-const baseUrl = "http://localhost:4001/log";
+const baseUrl = "http://localhost:4001/api/log";
 
 export default class Login extends Component {
   state = {
@@ -68,6 +67,12 @@ export default class Login extends Component {
                 <button className="btn btn-primary" type="submit">
                   Iniciar sesión
                 </button>
+                <br />
+                <br />
+                <button className="btn btn-primary" type="submit">
+                <a href="/Registro" style={{ textDecoration: 'none', color: 'inherit' }}>Registrarme</a>
+                </button>
+
               </form>
             </div>
           </div>
