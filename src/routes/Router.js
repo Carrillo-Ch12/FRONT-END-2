@@ -15,6 +15,7 @@ const Error = Loadable(lazy(() => import("../pages/Error/404")));
 
 const Biblioteca = Loadable(lazy(() => import("../pages/Paginas/Biblioteca")));
 const Login = Loadable(lazy(() => import("../pages/Paginas/Login")));
+const Registro = Loadable(lazy(() => import("../pages/Paginas/Registro")));
 
 
 const Router = [
@@ -26,6 +27,7 @@ const Router = [
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Biblioteca", element: <Biblioteca /> },
+      { path: "Registro", element: <Registro /> },
     ],
   },
 ];
