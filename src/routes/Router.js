@@ -18,11 +18,11 @@ const Login = Loadable(lazy(() => import("../pages/Paginas/Login")));
 
 
 const Router = [
+  { path: "", exact: true, element: <Login /> },
   {
     path: "/",
     element: <FullLayout />,
     children: [
-      { path: "", exact: true, element: <Login /> },
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Biblioteca", element: <Biblioteca /> },
