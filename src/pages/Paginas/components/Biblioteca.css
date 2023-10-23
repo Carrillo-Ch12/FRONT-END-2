@@ -1,0 +1,49 @@
+/* biblioteca.css */
+
+/* Contenedor principal de la lista de videojuegos */
+.videojuegos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Aumentar el espacio entre tarjetas */
+    justify-content: center; /* Centrar las tarjetas en el contenedor */
+  }
+  
+  /* Tarjeta de videojuego */
+  .card-videojuego {
+    width: 250px; /* Establece un ancho fijo para cada tarjeta */
+    height: 350px; /* Establece una altura fija para cada tarjeta */
+    border: 1px solid #de7a0e;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #ded7d7;
+    margin: 10px;
+    padding: 15px;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #101010;
+  }
+  
+  /* Estilo al pasar el mouse por encima de la tarjeta */
+  .card-videojuego:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Imagen dentro de la tarjeta */
+  .card-videojuego img {
+    max-width: 100%;
+    max-height: 300px; /* Establece una altura máxima para la imagen */
+    height: auto;
+    border-radius: 10px; /* Agregar bordes redondeados a la imagen */
+  }
+  
+  /* Título del videojuego */
+  .card-videojuego p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Añadir transición al título */
+  .card-videojuego p:hover {
+    color: #ff5733; /* Cambiar color al pasar el mouse por encima del título */
+  }
