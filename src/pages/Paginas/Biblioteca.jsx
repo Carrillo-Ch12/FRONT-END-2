@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import './components/Biblioteca.css'; // Ajusta la ruta de importación si es necesario
 import { Link } from "react-router-dom";
 
 const baseUrl = "http://localhost:4001/biblioteca";
@@ -25,10 +26,14 @@ export const Biblioteca = () => {
       <p>Se encontraron {videojuegos.length} resultados</p>
       <div className="videojuegos-list">
         {videojuegos.map(videojuego => (
-          <Link to={`/videojuego/${videojuego.id}`} key={videojuego.id}>
+          <Link 
+            to={`/videojuego/${videojuego.titulo}`}
+            key={videojuego.titulo}
+            className="card-videojuego"
+          >
             <div className="videojuego-item">
-              <img src={videojuego.img} alt={videojuego.titulo}/>
-              <p>{videojuego.titulo}</p> {/* Added this line to show the video game title */}
+              <img src={videojuego.img} alt={videojuego.titulo} />
+              <p>{videojuego.titulo}</p>
             </div>
           </Link>
         ))}
@@ -38,4 +43,5 @@ export const Biblioteca = () => {
 };
 
 export default Biblioteca;
+
 
