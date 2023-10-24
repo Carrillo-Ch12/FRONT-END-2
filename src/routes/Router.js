@@ -20,6 +20,7 @@ const Registro = Loadable(lazy(() => import("../pages/Paginas/Registro")));
 
 const Router = [
   { path: "", exact: true, element: <Login /> },
+  { path: "Registro", element: <Registro /> },
   {
     path: "/",
     element: <FullLayout />,
@@ -27,7 +28,7 @@ const Router = [
       { path: "*", element: <Navigate to="/404" /> },
       { path: "404", element: <Error /> },
       { path: "Biblioteca", element: <Biblioteca /> },
-      { path: "Registro", element: <Registro /> },
+      
     ],
   },
 ];
