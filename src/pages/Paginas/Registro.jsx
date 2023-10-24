@@ -21,7 +21,7 @@ export default class Registro extends Component {
     try {
       const response = await axios.post(baseUrl2, this.state); 
       console.log(response);
-      if (response.status === 200) { 
+      if (response.status === 201) { 
         window.location.href = "/";
       } else {
         console.log("Credenciales incorrectas");
