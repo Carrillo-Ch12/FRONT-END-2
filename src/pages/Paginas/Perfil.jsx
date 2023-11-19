@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/Perfil.css'
 
 const Perfil = () => {
   const [perfil, setPerfil] = useState({});
@@ -11,7 +13,7 @@ const Perfil = () => {
       try {
         const response = await axios.get(`http://localhost:4001/Perfil/${Nombre_perfil}`);
         console.log('API response:', response.data);
-        setPerfil(response.data); // No necesitas indexar [0] ya que la respuesta debe contener directamente el objeto del perfil
+        setPerfil(response.data);
       } catch (error) {
         console.error('Error fetching profile:', error);
       }
@@ -22,10 +24,17 @@ const Perfil = () => {
 
   return (
     <div>
-      <h2>{} hola</h2>
-      <p>Perfil: {perfil.Nombre_usuario}</p>
-      <p>Email: {perfil.Correo}</p>
-      <p>Contraseña: {perfil.Contraseña}</p> {/* Agregado para mostrar la contraseña */}
+      <div className='cuadro1'>
+        <div className='Foto'> <img src={perfil.Foto_de_perfil} alt="Foto de perfil" /></div>
+        <div className='cuadro2'>
+          <div className='Datos'>
+            <p>Perfil: {perfil.Nombre_usuario}</p>
+            <p>Email: {perfil.Correo}</p>
+            <p>Contraseña: {perfil.Contraseña}</p>
+          </div>
+        </div>
+      </div>
+      
     </div>
   );
 };

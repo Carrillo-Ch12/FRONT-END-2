@@ -25,12 +25,13 @@ const Login = () => {
       const response = await axios.post(baseUrl, form);
       console.log(response);
       if (response.status === 200) {
+        sessionStorage.setItem('Nombre', form.Nombre_usuario);
         window.location.href = "/Biblioteca";
       } else {
         console.log("Credenciales incorrectas");
       }
     } catch (error) {
-      console.log("Error en la solicitud:", error);
+      console.error("Error al iniciar sesión:", error);
     }
   };
 
