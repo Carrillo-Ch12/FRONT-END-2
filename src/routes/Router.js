@@ -21,6 +21,7 @@ const Perfil = Loadable(lazy(() => import("../pages/Paginas/Perfil")));
 
 const Router = [
   { path: "", exact: true, element: <Login /> },
+  { path: "Registro", element: <Registro /> },
   {
     path: "/",
     element: <FullLayout />,
@@ -30,6 +31,7 @@ const Router = [
       { path: "Biblioteca", element: <Biblioteca /> },
       { path: "Registro", element: <Registro /> },
       { path: "Perfil", element: <Perfil /> },
+
     ],
   },
 ];
