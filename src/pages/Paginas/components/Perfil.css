@@ -1,0 +1,39 @@
+
+.cuadro1{    
+    margin: auto;
+    border: 2px solid #000; 
+    padding: 20px; 
+    width: 750px; 
+    background-color:#e7dbdb9c;
+    display: flex;
+}
+
+.Foto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+.Foto img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.cuadro2 {
+    
+    margin: 20px;
+    border: 2px solid #000; /* Grosor del borde y color (puedes ajustar según tu preferencia) */
+    padding: 50px; /* Espaciado interno */
+    width: 400px; /* Ancho del cuadro (ajusta según tus necesidades) */
+}
+
+.Datos{
+
+    color: rgb(167, 97, 97);
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+  
