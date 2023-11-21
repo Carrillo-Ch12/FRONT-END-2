@@ -18,7 +18,7 @@ const Registro = () => {
     try {
       const response = await axios.post(baseUrl2, form);
       console.log(response);
-      if (response.status === 201) { 
+      if (response.status === 201) {
         window.location.href = "/";
       } else {
         console.log("Credenciales incorrectas");
