@@ -18,6 +18,7 @@ const Login = Loadable(lazy(() => import("../pages/Paginas/Login")));
 const Registro = Loadable(lazy(() => import("../pages/Paginas/Registro")));
 const Perfil = Loadable(lazy(() => import("../pages/Paginas/Perfil")));
 const Juego= Loadable(lazy(() => import("../pages/Paginas/Juego")));
+const Lista_juegos= Loadable(lazy(() => import("../pages/Paginas/Lista_juegos")));
 
 
 const Router = [
@@ -33,6 +34,7 @@ const Router = [
       { path: "Registro", element: <Registro /> },
       { path: "Perfil", element: <Perfil /> },
       { path: "Juego", element: <Juego /> },
+      { path: "Lista_juegos", element: <Lista_juegos /> },
 
     ],
   },
