@@ -23,11 +23,16 @@ const Perfil = () => {
   }, []);
 
   return (
+    
     <div className='Caja1'>
-        <div className='Foto'><img src={Juego.Portada} alt="Foto de perfil" /></div>
-        <p>Nombre: {Juego.Titulo}</p>
-        <p>Descripcion: {Juego.Descripcion}</p>
-        <p>Fecha de lanzamiento: {Juego.Año_de_lanzamiento}</p>
+      <h2>{Juego.Titulo}</h2>
+      <div className='Foto'><img src={Juego.Portada} alt="Foto de perfil" /></div>
+        <div>
+          
+          <p>Descripcion: {Juego.Descripcion}</p>
+          <p>Fecha de lanzamiento: {Juego.Año_de_lanzamiento}</p>
+        </div>
+        
     </div>
   );
 };

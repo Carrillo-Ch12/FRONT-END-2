@@ -21,11 +21,15 @@ export const Navbar = () => {
                     <NavLink to = "/Biblioteca">Biblioteca</NavLink>
                 </li>
                 <li>
+                    <NavLink to ="/Favoritos">Favoritos</NavLink>
+                </li>
+                <li>
                     <NavLink to= "/Perfil">Perfil</NavLink>
                 </li>
                 <li>
                     <NavLink to = "/">Cerrar sesion</NavLink>
                 </li>
+                
             </ul>
         </nav>
     );

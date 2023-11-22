@@ -1,13 +1,39 @@
+
 .Caja1{
-    display: flex;
+    display:flex;
+    justify-content: space-between;
     margin: auto;
     border: 2px solid #000;
     width: 500px;
     height: auto;
     padding: 20px;
+    background-color: #000;
+    
+    
+
+}
+.Caja1 h2{
+    display: flex;
+    color: azure;
+    
 }
 
 .Foto img{
     width: 200px;
     height: 300px;
+    margin: 10px;
+
+}
+
+.Caja1 div{
+     margin: 0.5%;
+     width: max-content;
+
+     
+}
+
+.Caja1 div p{
+    display: block;
+    color: aliceblue;
+    
 }
