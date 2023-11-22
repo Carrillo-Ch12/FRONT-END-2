@@ -1,0 +1,38 @@
+
+.cuadro1{    
+    margin: auto;
+    border: 2px solid #000; 
+    padding: 20px; 
+    width:fit-content; 
+    background-color:#e7dbdb9c;
+    display: flex;
+}
+
+.Foto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; 
+}
+.Foto img {
+    width: auto;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.cuadro2 {
+    margin: 20px;
+    border: 2px solid #000; 
+    padding: 50px; 
+    width: 550px; 
+}
+
+.Datos{
+    display:contents;
+    color: rgb(167, 97, 97);
+    margin: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+  
