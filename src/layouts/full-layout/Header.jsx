@@ -27,6 +27,9 @@ export const Navbar = () => {
                     <NavLink to= "/Perfil">Perfil</NavLink>
                 </li>
                 <li>
+                    <NavLink to = "/Lista_juegos">Lista de juegos</NavLink>
+                </li>
+                <li>
                     <NavLink to = "/">Cerrar sesion</NavLink>
                 </li>
                 
