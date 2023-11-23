@@ -1,39 +1,90 @@
+/* Juego.css */
 
-.Caja1{
-    display:flex;
-    justify-content: space-between;
-    margin: auto;
-    border: 2px solid #000;
-    width: 500px;
-    height: auto;
-    padding: 20px;
-    background-color: #000;
-    
-    
-
-}
-.Caja1 h2{
+.main-juego-page {
     display: flex;
-    color: azure;
-    
-}
+    flex-direction: row;
+    gap: 20px;
 
-.Foto img{
+  }
+  
+  .left-side {
+    width: 70%;
+  }
+  
+  .contenedor-banner {
+    z-index: 1;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: black;
+  }
+  
+  .asides {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px 20px 15px 20px;
+  }
+  
+  .banner-Foto img {
+    position: relative;
     width: 200px;
     height: 300px;
-    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-radius: 10px;
 
-}
+  }
+  
+  .banner-info {
+    margin-left: 20px;
+  }
+  
+  .show-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:aliceblue;
+  }
 
-.Caja1 div{
-     margin: 0.5%;
-     width: max-content;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
 
-     
-}
-
-.Caja1 div p{
-    display: block;
-    color: aliceblue;
-    
-}
+  .button-heart {
+    background-color: rgba(61, 61, 61, 0.3058823529);
+    border: #f0b400 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0;
+    font-size: 0.9em;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Puedes ajustar los estilos de las etiquetas <label> y <p> según tus necesidades */
+  
+  .info-abajo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(220, 208, 208, 0.053);;
+    color: #fff;
+  }
+  
+  /* Puedes ajustar los estilos del texto de la descripción según tus necesidades */
+  
