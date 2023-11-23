@@ -19,7 +19,6 @@ const Lista_juegos = () => {
     fetchListaJuegos();
   }, []);
 
-  // Función para formatear la fecha
   const formatearFecha = (fecha) => {
     const opcionesFecha = { day: '2-digit', month: 'long', year: 'numeric' };
     return new Date(fecha).toLocaleDateString('es-ES', opcionesFecha);

@@ -25,8 +25,6 @@ const Perfil = () => {
     fetchPerfil();
   }, []);
 
-
-
   const handleNombreChange = (event) => {
     setNuevoNombre(event.target.value);
   };
@@ -52,8 +50,6 @@ const Perfil = () => {
       console.error('Error cambiando la contraseña:', err);
     }
   };
-  
-
   const handleContrasenaSubmit = async () => {
     try {
       const res = await axios.post(`http://localhost:4001/MODcontrasena/${Nombre_perfil}/${nuevaContrasena}`);
