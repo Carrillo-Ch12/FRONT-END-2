@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './components/Lista_juegos.css';
 
 const Lista_juegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
@@ -25,14 +27,11 @@ const Lista_juegos = () => {
   };
 
   return (
-    <div>
+    <div className="lista-container">
       {listaJuegos.map((juego, index) => (
-        <div key={index}>
+        <div key={index} className="juego-card">
           <h2>{juego.Titulo}</h2>
-          <p>{juego.Descripcion}</p>
-          <p>Año de lanzamiento: {formatearFecha(juego.Año_de_lanzamiento)}</p>
           <img src={juego.Portada} alt={`Portada del juego ${juego.Titulo}`} />
-          <p>Likes: {juego.Likes}</p>
         </div>
       ))}
     </div>
