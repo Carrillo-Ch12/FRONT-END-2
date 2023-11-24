@@ -8,7 +8,7 @@ export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <nav>
-            <Link to = "/" className="title">Gamebox</Link>
+            <Link to = "/Biblioteca" className="title">Gamebox</Link>
             <div className="menu" onClick={()=>{
                 setMenuOpen(!menuOpen)
             }}>
@@ -19,9 +19,6 @@ export const Navbar = () => {
             <ul className= {menuOpen ? "open" : ""}>
                 <li>
                     <NavLink to = "/Biblioteca">Biblioteca</NavLink>
-                </li>
-                <li>
-                    <NavLink to ="/Favoritos">Favoritos</NavLink>
                 </li>
                 <li>
                     <NavLink to= "/Perfil">Perfil</NavLink>
