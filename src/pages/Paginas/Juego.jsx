@@ -7,9 +7,9 @@ const Juego = () => {
   const [Juego, setJuego] = useState({});
   const [Generos, setGeneros] = useState([]);
   const [Plataformas, setPlataformas] = useState([]);
-
+  const [Nombre_perfil, setNombrePerfil] = useState(sessionStorage.getItem('Nombre'));
+  const [Nombre_juego,serNombreJuego] = useState(sessionStorage.getItem('Juego'));
   useEffect(() => {
-    const Nombre_juego = sessionStorage.getItem('Juego');
 
     const fetchJuego = async () => {
       try {
@@ -50,6 +50,30 @@ const Juego = () => {
     const opcionesFecha = { day: '2-digit', month: 'long', year: 'numeric' };
     return new Date(fecha).toLocaleDateString('es-ES', opcionesFecha);
   };
+  const handleAgregarJuego = async () => {
+    try {
+      const res =await axios.post(`http://localhost:4001/Lista_juegos/agregar/${Nombre_perfil}/${Nombre_juego}`);
+      if (res.status === 200) {
+        window.location.href = "/Biblioteca";
+      } else {
+        console.log("Credenciales incorrectas");
+      }
+    } catch (err) {
+      console.error('Error al agregar el juego:', err);
+    }
+  };
+  const handleEliminarJuego = async () => {
+    try {
+      const res =await axios.post(`http://localhost:4001/Lista_juegos/Eliminar/${Nombre_perfil}/${Nombre_juego}`);
+      if (res.status === 200) {
+        window.location.href = "/Biblioteca";
+      } else {
+        console.log("Credenciales incorrectas");
+      }
+    } catch (err) {
+      console.error('Error al agregar el juego:', err);
+    }
+  };
 
   return (
     <div className='main-juego-page'>
@@ -82,8 +106,11 @@ const Juego = () => {
                 </div>
                 <div className='buttons'>
                   <p>
-                    <button className='button-heart'>
-                      Poner boton agregar a lista
+                    <button className='button-heart' onClick={handleAgregarJuego}>
+                      Agregar a la lista
+                    </button>
+                    <button className='button-heart' onClick={handleEliminarJuego}>
+                      Eliminar de la lista
                     </button>
                   </p>
                 </div>
