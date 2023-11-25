@@ -82,6 +82,7 @@ const Juego = () => {
 
       const data = await response.json();
       console.log(data);
+      window.location.href = "/Juego";
     } catch (error) {
       console.error('Error al enviar el comentario:', error);
     }
@@ -95,7 +96,7 @@ const Juego = () => {
     try {
       const res =await axios.post(`http://localhost:4001/Lista_juegos/agregar/${Nombre_perfil}/${Nombre_juego}`);
       if (res.status === 200) {
-        window.location.href = "/Biblioteca";
+        window.location.href = "/Lista_juegos";
       } else {
         console.log("Credenciales incorrectas");
       }
@@ -177,13 +178,13 @@ const Juego = () => {
             <button type="submit">Enviar Comentario</button>
          </form>
         </div>
-        <div>
+        <div className='Comentarios-section'>
             <h2>Comentarios para {Nombre_juego}</h2>
             <ul>
               {comentarios.map((comentario) => (
                 <li key={comentario._id}>
-                  <p>ID de Usuario: {comentario.idUsuario}</p>
-                  <p>Texto: {comentario.Texto}</p>
+                  <p>Usuario: {comentario.idUsuario}</p>
+                  <p>Comenta: {comentario.Texto}</p>
                   <p>Fecha : {formatearFecha(comentario.timestamp)}</p>
                 </li>
               ))}
