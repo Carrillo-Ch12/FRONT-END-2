@@ -19,7 +19,7 @@
     overflow: hidden;
     border-radius: 10px;
     -webkit-border-radius: 10px;
-    background-color: black;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
   }
   
   .asides {
@@ -87,4 +87,61 @@
   }
   
   /* Puedes ajustar los estilos del texto de la descripción según tus necesidades */
+  /* Juego.css */
+
+/* ... (tu código anterior) ... */
+
+.Comentarios-section {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+  }
+  
+  .Comentarios-section h2 {
+    color: #fff;
+  }
+  
+  .Comentarios-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .Comentarios-section label,
+  .Comentarios-section textarea {
+    width: 100%;
+  }
+  
+  .Comentarios-section textarea {
+    height: 100px;
+  }
+  
+  .Comentarios-section button {
+    background-color: rgba(61, 61, 61, 0.3058823529);
+    border: #f0b400 solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Comentarios-section button:hover {
+    background-color: #f0b400;
+  }
+  
+  .Comentarios-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .Comentarios-section li {
+    border: 1px solid rgba(220, 208, 208, 0.053);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(61, 61, 61, 0.3058823529);
+    color: #fff;
+  }
   
