@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './components/Lista_juegos.css';
+import { Link } from "react-router-dom";
 
 const Lista_juegos = () => {
   const [listaJuegos, setListaJuegos] = useState([]);
@@ -20,19 +21,18 @@ const Lista_juegos = () => {
 
     fetchListaJuegos();
   }, []);
-
-  const formatearFecha = (fecha) => {
-    const opcionesFecha = { day: '2-digit', month: 'long', year: 'numeric' };
-    return new Date(fecha).toLocaleDateString('es-ES', opcionesFecha);
+  const guardarEnSessionStorage = (titulo) => {
+    sessionStorage.setItem('Juego', titulo);
   };
 
   return (
     <div className="lista-container">
       {listaJuegos.map((juego, index) => (
-        <div key={index} className="juego-card">
+        
+        <Link key={index} className="juego-card" to={`/Juego`} onClick={() => guardarEnSessionStorage(juego.Titulo)} >
           <h2>{juego.Titulo}</h2>
           <img src={juego.Portada} alt={`Portada del juego ${juego.Titulo}`} />
-        </div>
+        </Link>
       ))}
     </div>
   );
