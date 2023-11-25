@@ -9,6 +9,8 @@ const Juego = () => {
   const [Plataformas, setPlataformas] = useState([]);
   const [Nombre_perfil, setNombrePerfil] = useState(sessionStorage.getItem('Nombre'));
   const [Nombre_juego,serNombreJuego] = useState(sessionStorage.getItem('Juego'));
+  const [comentarios, setComentarios] = useState([]);
+  const [Texto, setTexto] = useState('');
   useEffect(() => {
 
     const fetchJuego = async () => {
@@ -46,6 +48,45 @@ const Juego = () => {
     fetchGeneros();
   }, []);
 
+  useEffect(() => {
+    const fetchComentarios = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4001/mostrar/nosql/${Nombre_juego}`);
+        setComentarios(response.data.data);
+      } catch (error) {
+        console.error('Error fetching comments:', error);
+      }
+    };
+
+    fetchComentarios();
+  }, [Nombre_juego]);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const comentarioData = {
+      idUsuario: Nombre_perfil,
+      Titulo: Nombre_juego,
+      Texto
+    };
+
+    try {
+      const response = await fetch('http://localhost:4001/create/nosql', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(comentarioData)
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('Error al enviar el comentario:', error);
+    }
+  };
+
   const formatearFecha = (fecha) => {
     const opcionesFecha = { day: '2-digit', month: 'long', year: 'numeric' };
     return new Date(fecha).toLocaleDateString('es-ES', opcionesFecha);
@@ -66,7 +107,7 @@ const Juego = () => {
     try {
       const res =await axios.post(`http://localhost:4001/Lista_juegos/Eliminar/${Nombre_perfil}/${Nombre_juego}`);
       if (res.status === 200) {
-        window.location.href = "/Biblioteca";
+        window.location.href = "/Lista_juegos";
       } else {
         console.log("Credenciales incorrectas");
       }
@@ -129,7 +170,25 @@ const Juego = () => {
           <div className='Titulo'>
             <h2>Comentarios</h2>
           </div>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="Texto">Comentario:</label>
+            <textarea id="Texto" name="Texto" value={Texto} onChange={(e) => setTexto(e.target.value)} required></textarea>
+            <br />
+            <button type="submit">Enviar Comentario</button>
+         </form>
         </div>
+        <div>
+            <h2>Comentarios para {Nombre_juego}</h2>
+            <ul>
+              {comentarios.map((comentario) => (
+                <li key={comentario._id}>
+                  <p>ID de Usuario: {comentario.idUsuario}</p>
+                  <p>Texto: {comentario.Texto}</p>
+                  <p>Fecha : {formatearFecha(comentario.timestamp)}</p>
+                </li>
+              ))}
+            </ul>
+    </div>
       </div>
     </div>
   );
