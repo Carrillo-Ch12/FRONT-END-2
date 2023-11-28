@@ -145,3 +145,47 @@
     color: #fff;
   }
   
+  /* Juego.css */
+
+.Comentarios {
+    margin-top: 20px;
+    padding: 20px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+  }
+  
+  .Comentarios h2 {
+    color: #fff;
+  }
+  
+  .Comentarios ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .Comentarios li {
+    border: 1px solid rgba(220, 208, 208, 0.053);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: rgba(61, 61, 61, 0.3058823529);
+    color: #fff;
+  }
+  
+  .Comentarios p {
+    margin: 0;
+  }
+  
+  .Comentarios p:first-child {
+    font-weight: bold;
+  }
+  
+ 
+  .Comentarios p:nth-child(odd) {
+    margin-top: 5px;
+  }
+  
+  .Comentarios p:nth-child(even) {
+    margin-bottom: 5px;
+  }
+  

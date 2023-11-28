@@ -171,24 +171,24 @@ const Juego = () => {
             <h2>Comentarios</h2>
           </div>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="Texto">Comentario:</label>
+            <label htmlFor="Texto">Haz un comentario:</label>
             <textarea id="Texto" name="Texto" value={Texto} onChange={(e) => setTexto(e.target.value)} required></textarea>
             <br />
             <button type="submit">Enviar Comentario</button>
          </form>
         </div>
-        <div>
+        <div className='Comentarios'>
             <h2>Comentarios para {Nombre_juego}</h2>
             <ul>
               {comentarios.map((comentario) => (
                 <li key={comentario._id}>
-                  <p>ID de Usuario: {comentario.idUsuario}</p>
-                  <p>Texto: {comentario.Texto}</p>
-                  <p>Fecha : {formatearFecha(comentario.timestamp)}</p>
+                  <p>{comentario.idUsuario}</p>
+                  <p>{comentario.Texto}</p>
+                  <p>{formatearFecha(comentario.timestamp)}</p>
                 </li>
               ))}
             </ul>
-    </div>
+        </div>
       </div>
     </div>
   );
